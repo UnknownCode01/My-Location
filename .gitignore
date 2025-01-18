@@ -2,6 +2,7 @@
 
 # dependencies
 /node_modules
+/my-address-location-api
 /.pnp
 .pnp.js
 
