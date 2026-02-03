@@ -6,12 +6,10 @@ const app = express();
 const PORT = 3000;
 app.use(cors());
 
-const apiKey = process.env.API_KEY;
+const apiKey = "your_api_key";
 
 app.get('/api/get-location', async (req, res) => {
   const { latitude, longitude } = req.query;  // Get lat/long from client
-  console.log(apiKey);
-  
   const apiUrl = `https://api.opencagedata.com/geocode/v1/json?q=${latitude},${longitude}&key=${apiKey}`;
 
   try {
