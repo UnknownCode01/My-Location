@@ -6,7 +6,7 @@ const app = express();
 const PORT = 3000;
 app.use(cors());
 
-const apiKey = "your_api_key";
+const apiKey = '8e5b86eb52f846bfbfa6eb1434237681';//your api-key
 
 app.get('/api/get-location', async (req, res) => {
   const { latitude, longitude } = req.query;  // Get lat/long from client
