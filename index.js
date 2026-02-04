@@ -1,15 +1,9 @@
-import express from 'express';   // ES6 import syntax for express
-import cors from 'cors';
-
-const app = express();
-app.use(cors());
-
 async function gotLocation(position) {
   let loading = true;
   document.getElementById("locateBtn").innerHTML = "Loading...";
   const { latitude, longitude } = position.coords;
   // const apiUrl = `http://localhost:3000/api/get-location?latitude=${latitude}&longitude=${longitude}`;
-  const apiUrl = `https://my-address-location-api.netlify.app/functions/api?latitude=${latitude}&longitude=${longitude}`
+  const apiUrl = `https://my-address-location-api.netlify.app/.netlify/functions/api?latitude=${latitude}&longitude=${longitude}`
 
   try {
     const res = await fetch(apiUrl);
