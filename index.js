@@ -1,3 +1,9 @@
+import express from 'express';   // ES6 import syntax for express
+import cors from 'cors';
+
+const app = express();
+app.use(cors());
+
 async function gotLocation(position) {
   let loading = true;
   document.getElementById("locateBtn").innerHTML = "Loading...";
